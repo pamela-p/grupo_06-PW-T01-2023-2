@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .jogo {
+    background: linear-gradient(to right, #345c9c, #8444fc); /*degrade do azul para o roxo*/
+    border-radius: 10px; /* borda arredondada */
+  }
+
+  h3{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .header {
+    color: #000000;
+    padding: 15px;
+    text-align: right;
+    position: relative;
+  }
+
+  .perfil{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .perfil img {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; /* Para criar uma imagem de perfil circular */
+  }
+
+  .entrar {
+    background: linear-gradient(to right, #34368c, #8456fc); /* Degradê roxo */
+    color: #ffffff; 
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    border: none;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em um ponteiro quando passar por cima */
+  }
+  
+
+  table {
+   /*text-align: center;*/
+    border-collapse: separate; /* espaço entre uma linha e outra */
+    border-spacing: 12px;  /* espaço entre uma linha e outra */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-container {
+    display: flex; /* Use flexbox para alinhar as imagens lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre as imagens */
+    align-items: center; /* Centraliza verticalmente as imagens */
+  }
+  
+  .image-container img {
+    max-width: 100%;  /* Largura máxima de 100% do contêiner pai */
+    height: auto;
+    max-height: 414px;
+    width: auto; 
+    max-width: 414px;
+    object-fit: cover; /*para cortar a imagem ao invés de distorcer*/
+    margin: 0.5%; /* Define uma margem entre as imagens */
+    border-radius: 10px; /*arredondar a imagem */
+    border: 2px solid white;
+    margin-bottom: 10px;
+  }
+
+  .imagem-com-porcentagem {
+    text-align: center; 
+  }
+
+  .porcentagem {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .footer {
+    padding: 15px;
+  }
+  
+  /* For mobile phones: 
+  Fazemos isso adicionando mais uma consulta de mídia (em 600px) 
+  e um conjunto de novas classes para dispositivos maiores que 600px (mas menores que 768px):
+  
+  Exemplo: Observe que os dois conjuntos de classes são quase idênticos, a única diferença é o nome ( col-e col-s-):
+  
+  */
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  /*Mobile First significa projetar para dispositivos móveis antes de projetar para desktop ou qualquer outro dispositivo 
+  (isso tornará a exibição da página mais rápida em dispositivos menores).
+  
+  Isso significa que devemos fazer algumas alterações em nosso CSS.
+  
+  Em vez de alterar os estilos quando a largura for menor que 768px, devemos alterar o design quando a largura for maior que 768px. 
+  Isso tornará nosso design Mobile First:
+  */
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+  /* Quando a tela for menor que 768px, as imagens ficarão uma em cima da outra */
+@media only screen and (max-width: 767px) {
+    .jogo .image-container {
+      flex-direction: column; /* Empilhar verticalmente as imagens */
+      align-items: center; /* Centralizar as imagens verticalmente */
+    }
+  }
