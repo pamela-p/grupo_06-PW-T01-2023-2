@@ -1,0 +1,79 @@
+.header {
+    background-color: transparent;
+    color: black;
+    border: 7px solid #6500a8; /* borda */
+    border-radius: 50px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+body{
+    background: linear-gradient(to right, 
+    #f4a4bb, #2c31d4); /*degrade*/
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+    border-radius: 10px; /* borda arredondada */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* sombra */
+}
+
+.cadastro{
+    text-align: left;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+input{
+    width: 93%;
+    background-color: #d5d4d4;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
+    background: linear-gradient(to right, 
+    #8c3e7d, #5d357b);
+    color: white;
+    font-size: large;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.possuoUsuario{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.possuoUsuario a{
+    color: #6500a8;
+    margin-left: 5px;
+}
+
