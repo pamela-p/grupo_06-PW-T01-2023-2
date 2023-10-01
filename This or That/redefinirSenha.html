@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_login.css" />
-    <title>Jogo This or That - Login</title>
+    <title>Jogo This or That - Rdefinir Senha</title>
 </head>
 <body>
-    <div class="header headerLogin">
-        <h1>Entre com um Usuário</h1>
+    <div class="header headerSenha">
+        <h1>Redefinir Senha</h1>
     </div>
 
     <div class="container">
         <div class="image-container">
             <img src="imagens/perfil2.png" alt="login">
         </div>
+
+        <p class="descricao">Informe o e-mail para qual deseja redefinir a sua senha</p>
+
         <div class="cadastro">
             <fomr>                
                 <div class="input-group">
@@ -22,19 +25,10 @@
                     <input type="email" id="email" name="email" required placeholder="email@email.com">
                 </div>
 
-                <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required placeholder="***********">
-                </div>
+                <button type="submit">Redefinir senha</button>
 
-                <p class="possuoUsuario"> <a href="#">Esqueci minha senha.</a></p>
-                <!--link vazio. adicionar link para pagina novaSenha-->
-                
-                
-                <button type="submit">Entrar</button>
-
-                <button type="submit">Criar Usuário</button>
-
+                <p class="possuoUsuario"> <a href="#">Voltar ao Login.</a></p>
+                <!--link vazio. adicionar link para pagina login-->
             </fomr>
         </div>
     </div>

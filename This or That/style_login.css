@@ -25,6 +25,16 @@
     padding-bottom: 0;
 }
 
+.headerSenha{
+    padding: 63px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.descricao{
+    text-align: center;
+}
+
 body{
     background: linear-gradient(to right, 
     #f4a4bb, #2c31d4); /*degrade*/
