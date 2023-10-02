@@ -87,9 +87,9 @@
     height: auto;
     max-height: 414px;
     width: auto; 
-    max-width: 414px;
+    /*max-width: 414px;*/
     object-fit: cover; /*para cortar a imagem ao invés de distorcer*/
-    margin: 0.5%; /* Define uma margem entre as imagens */
+    margin: 0,5%; /* Define uma margem entre as imagens */
     border-radius: 10px; /*arredondar a imagem */
     border: 2px solid white;
     margin-bottom: 10px;
@@ -104,6 +104,11 @@
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
+  }
+
+  .OU{
+    margin: 10px;
+    font-weight: bold;
   }
   
   .footer {
