@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_login.css" />
+    <script src="script_login.js"></script>
     <title>Jogo This or That - Login</title>
 </head>
 <body>
@@ -27,13 +28,13 @@
                     <input type="password" id="senha" name="senha" required placeholder="***********">
                 </div>
 
-                <p class="possuoUsuario"> <a href="#">Esqueci minha senha.</a></p>
+                <p class="possuoUsuario"> <a href="novaSenha.html">Esqueci minha senha.</a></p>
                 <!--link vazio. adicionar link para pagina novaSenha-->
                 
                 
-                <button type="submit">Entrar</button>
+                <button type="submit" onclick="validarLogin()">Entrar</button>
 
-                <button type="submit">Criar Usuário</button>
+                <button type="submit" onclick="criarUsuario()">Criar Usuário</button>
 
             </fomr>
         </div>
