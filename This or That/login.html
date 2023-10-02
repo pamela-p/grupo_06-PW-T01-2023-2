@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="styles/style_login.css" />
-    <script src="scripts/script_login.js"></script>
+    <link rel="stylesheet" href="style_login.css" />
     <title>Jogo This or That - Login</title>
 </head>
 <body>
@@ -18,22 +16,25 @@
             <img src="imagens/perfil2.png" alt="login">
         </div>
         <div class="cadastro">
-            <fomr>                
+            <fomr> 
+                <div id="msgError"></div>               
                 <div class="input-group">
-                    <label for="email">E-mail</label>
+                    <label id=emailLabel for="email">E-mail</label>
                     <input type="email" id="email" name="email" required placeholder="email@email.com">
                 </div>
 
                 <div class="input-group">
-                    <label for="senha">Senha</label>
+                    <label id="senhaLabel" for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" required placeholder="***********">
                 </div>
 
-                <p class="possuoUsuario"> <a href="redefinirSenha.html">Esqueci minha senha.</a></p>                
+                <p class="possuoUsuario"> <a href="novaSenha.html">Esqueci minha senha.</a></p>
+                <!--link vazio. adicionar link para pagina novaSenha-->
                 
-                <button type="submit" onclick="validarLogin()">Entrar</button>
+                
+                <button type="submit" onclick="entrar()">Entrar</button>
 
-                <button type="submit" onclick="criarUsuario()">Criar Usuário</button>
+                <button type="submit">Criar Usuário</button>
 
             </fomr>
         </div>
