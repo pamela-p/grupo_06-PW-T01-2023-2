@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles/style_login.css" />
     <title>Jogo This or That - Login</title>
 </head>
 <body>
@@ -16,7 +20,7 @@
             <img src="imagens/perfil2.png" alt="login">
         </div>
         <div class="cadastro">
-            <fomr> 
+            <form> 
                 <div id="msgError"></div>               
                 <div class="input-group">
                     <label id=emailLabel for="email">E-mail</label>
@@ -26,6 +30,7 @@
                 <div class="input-group">
                     <label id="senhaLabel" for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" required placeholder="***********">
+                    <i id="verSenha" class="bi bi-eye" aria-hidden="true"></i>
                 </div>
 
                 <p class="possuoUsuario"> <a href="novaSenha.html">Esqueci minha senha.</a></p>
@@ -36,8 +41,9 @@
 
                 <button type="submit">Criar Usuário</button>
 
-            </fomr>
+            </form>
         </div>
     </div>
+    <script src="scripts/script_cadastro.js"></script>
 </body>
 </html>
