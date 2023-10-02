@@ -77,6 +77,7 @@ body{
   }
 
 .cadastro{
+    font-family: 'Lato', sans-serif;
     text-align: left;
 }
 
@@ -100,6 +101,7 @@ input{
 }
 
 button{
+    font-family: 'Montserrat';
     background: linear-gradient(to right, 
     #8c3e7d, #5d357b);
     color: white;
@@ -116,6 +118,8 @@ button{
 }
 
 .possuoUsuario{
+    /*font-family: 'Montserrat';*/
+    font-size: small;
     text-align: center;
     margin-top: 10px;
 }
