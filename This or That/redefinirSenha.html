@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_login.css" />
+    <script src="script_redefinirSenha.js"></script>
     <title>Jogo This or That - Rdefinir Senha</title>
 </head>
 <body>
@@ -25,10 +26,9 @@
                     <input type="email" id="email" name="email" required placeholder="email@email.com">
                 </div>
 
-                <button type="submit">Redefinir senha</button>
+                <button type="submit" onclick="validarEmail()">Redefinir senha</button>
 
-                <p class="possuoUsuario"> <a href="#">Voltar ao Login.</a></p>
-                <!--link vazio. adicionar link para pagina login-->
+                <p class="possuoUsuario"> <a href="login.html">Voltar ao Login.</a></p>
             </fomr>
         </div>
     </div>
