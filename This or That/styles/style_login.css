@@ -36,6 +36,13 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+.bi-eye{
+    position:relative;
+    bottom: 40px;
+    left: 300px;
+    cursor: pointer;
+    color: #0d009c;
+  }
 
 .descricao{
     text-align: center;
@@ -77,7 +84,6 @@ body{
   }
 
 .cadastro{
-    font-family: 'Lato', sans-serif;
     text-align: left;
 }
 
@@ -93,15 +99,15 @@ label{
 input{
     width: 93%;
     background-color: #d5d4d4;
-    padding: 10px;
+    padding: 10px 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
 }
 
+
 button{
-    font-family: 'Montserrat';
     background: linear-gradient(to right, 
     #8c3e7d, #5d357b);
     color: white;
@@ -118,8 +124,6 @@ button{
 }
 
 .possuoUsuario{
-    /*font-family: 'Montserrat';*/
-    font-size: small;
     text-align: center;
     margin-top: 10px;
 }
