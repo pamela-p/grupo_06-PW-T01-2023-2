@@ -56,6 +56,8 @@ const imagens = [ //lista de iamgens, futuramente pegar do banco de dados ou API
 ];
 
 const indicesUsados = []; //para não repetir imagens que já foram
+const imagensAleatorias = []; //para escolher a imagens aleatóriamente
+let timer; //para o setTimeOut
 
 // Função que adiciona as imagens
 function adicionarImagens(){
@@ -98,26 +100,11 @@ function adicionarImagens(){
 
     const buttons = document.querySelectorAll('.image-button');
 
-    //escurecer imagem ao clicar
+    //eventos de clique
     buttons.forEach(button => {
-
-        button.onclick = function() {
-            // Adiciona a classe 'escurecida' de todas as imagens
-            const todasImagens = document.querySelectorAll('.image-container img');
-            todasImagens.forEach(imagem => {
-                imagem.classList.add('escurecida');
-            });
-
-            // Deixa a imagem associada ao botão clicado normal
-            const img = button.querySelector('img');
-            img.classList.remove('escurecida');
-            console.log('Imagem clicada:', img.src);
-
-            //FALTA
-            //atualizar porcentagem, quando tiver banco de dados
-            //depois de alguns segundos trocar a imagem
-        };
-    })
+        //chama função ao clicar na imagem
+       button.addEventListener('click', onClickImage);
+    });
 }
 
 // Função que escolhe as imagens aleatóriamente
@@ -134,6 +121,34 @@ function escolherImagensAleatorias(quantidade){
     }
     
     return imagensAleatorias;
+}
+
+//função para quando o usuário clicar na imagem
+function onClickImage(){
+    clearTimeout(timer);
+
+    //escurece todas as imagens
+    const todasImagens = document.querySelectorAll('.image-container img');
+    todasImagens.forEach(imagem => {
+        imagem.classList.add('escurecida');
+    })
+
+    //"desescurece" a imagem que foi escolhida
+    const img = this.querySelector('img');
+    img.classList.remove('escurecida');
+
+    //após 3 segundos troca a imagem
+    setTimeout(trocarImagens, 3000);
+}
+
+//função para mostrar as novas imagens
+function trocarImagens(){
+    //retirar as imagens que estavam antes (limpar container de imagens)
+    const imageContainer = document.getElementById('image-container');
+    imageContainer.innerHTML = "";
+
+    imagensAleatorias.length = 0; //para não repetir imagens
+    adicionarImagens(); //adiciona novas imagens
 }
 
 //Inicializa a função quando a página carregar
