@@ -37,6 +37,14 @@
     padding-bottom: 0;
 }
 
+.bi-eye{
+    position:relative;
+    bottom: 40px;
+    left: 300px;
+    cursor: pointer;
+    color: #0d009c;
+  }
+
 .descricao{
     text-align: center;
 }
