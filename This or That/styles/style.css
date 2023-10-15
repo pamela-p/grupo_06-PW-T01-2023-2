@@ -29,6 +29,14 @@
   .jogo {
     background: linear-gradient(to right, #345c9c, #8444fc); /*degrade do azul para o roxo*/
     border-radius: 10px; /* borda arredondada */
+
+    text-align: center; /*centralizar horizontalmente */
+
+    /*centralizar verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   h3{
@@ -91,10 +99,11 @@
   
   .image-container img {
     max-width: 100%;  /* Largura máxima de 100% do contêiner pai */
+    max-height: 100%;
     height: auto;
-    max-height: 414px;
+    max-height: 220px;
     width: auto; 
-    /*max-width: 414px;*/
+    /*max-height: 414px;*/
     object-fit: cover; /*para cortar a imagem ao invés de distorcer*/
     margin: 0,5%; /* Define uma margem entre as imagens */
     border-radius: 10px; /*arredondar a imagem */
@@ -108,6 +117,7 @@
 
   .imagem-com-porcentagem {
     text-align: center; 
+    align-items: center;
   }
 
   .porcentagem {

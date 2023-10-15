@@ -2,26 +2,70 @@ function entrar(){
     window.location.href = 'login.html';
 }
 
-const imagens = [
+const imagens = [ //lista de iamgens, futuramente pegar do banco de dados ou API
     {
-        src: 'imagens/cachorro-da-raca-lulu-da-pomeramia.jpg',
-        alt: 'lulu da pomeramia',
-        porcentagem: '0%' //enquanto não tem banco
+        src: 'imagens/crr1.jpg',
+        alt: 'lulu da pomeramia'
+        //porcentagem: '0%' //enquanto não tem banco
     },
     {
-        src: 'imagens/golden-retriever0.jpg',
-        alt: 'golden retriever',
-        porcentagem: '0%' //enquanto não tem banco
+        src: 'imagens/crr2.jpg',
+        alt: 'golden retriever'
+        //porcentagem: '0%' //enquanto não tem banco
+    },
+    {
+        src: 'imagens/crr6.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr4.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr5.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr6.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr7.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr8.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr9.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr10.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr11.jpg',
+        alt: ''
+    },
+    {
+        src: 'imagens/crr12.jpg',
+        alt: ''
     }
 ];
+
+const indicesUsados = []; //para não repetir imagens que já foram
 
 // Função que adiciona as imagens
 function adicionarImagens(){
     const imageContainer = document.getElementById('image-container');
+    const imagensAleatorias = escolherImagensAleatorias(2); // escolhe 2 imagens aleatorias da lista de imagens
     let isFirstImage = true;
 
-    imagens.forEach(imagemInfo => {
+    imagensAleatorias.forEach(imagemInfo => {
         //adiciona OU entre as imagens
+        //para adicionar o ou apenas depois da primeira imagem
         if (!isFirstImage) {
             const ou = document.createElement('p');
             ou.className = 'OU';
@@ -42,22 +86,13 @@ function adicionarImagens(){
 
         const porcentagem = document.createElement('p');
         porcentagem.className = 'porcentagem';
-        porcentagem.textContent = imagemInfo.porcentagem;
+        porcentagem.textContent = '0%';
 
         button.appendChild(img);
         div.appendChild(button);
 
-        //adicionar o OU, procurar outra forma de fazer
-       /* if(index < imagens.length - 1) {
-            const ou = document.createElement('p');
-            ou.className = 'OU';
-            ou.textContent = 'OU';
-            div.appendChild(ou);
-        }*/
-
         div.appendChild(porcentagem);
         imageContainer.appendChild(div);
-        //imageContainer.insertBefore(div, imageContainer.lastChild);
         isFirstImage = false;
     });
 
@@ -65,12 +100,6 @@ function adicionarImagens(){
 
     //escurecer imagem ao clicar
     buttons.forEach(button => {
-       /* button.onclick = function(){
-            const img = button.querySelector('img');
-            img.style.filter = 'brightness(50%)';
-
-            console.log('Imagem clicada:', img.src);
-        }*/
 
         button.onclick = function() {
             // Adiciona a classe 'escurecida' de todas as imagens
@@ -89,6 +118,22 @@ function adicionarImagens(){
             //depois de alguns segundos trocar a imagem
         };
     })
+}
+
+// Função que escolhe as imagens aleatóriamente
+function escolherImagensAleatorias(quantidade){
+    const imagensAleatorias = [];
+
+    while (imagensAleatorias.length < quantidade){
+        const indiceAleatorio = Math.floor(Math.random() * imagens.length);
+
+        if(!indicesUsados.includes(indiceAleatorio)){
+            imagensAleatorias.push(imagens[indiceAleatorio]);
+            indicesUsados.push(indiceAleatorio);
+        }
+    }
+    
+    return imagensAleatorias;
 }
 
 //Inicializa a função quando a página carregar
